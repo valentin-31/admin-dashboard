@@ -1,43 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+
 .mainContainer{
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
 
+/* Grupo de elementos a la izquierda */
+
 .leftSide{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display:  grid;
     grid-template-columns: 0.5fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr;
+
+    background-color: #fde047;
 }
 
+/* dashboard */
+
 .title{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     grid-column: 1/3;
     grid-row: 1/2;
 }
 
+/* Primer grupo de elementos */
+
 .quickAccesGroup{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     grid-column: 2/3;
     grid-row: 2/3;
 }
 
+.quickAccesGroup > ul{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    gap: 20px;
+}
+
+/* Segundo grupo de elementos */
+
 .configGroup{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     grid-column: 2/3;
     grid-row: 3;    
 }
 
+.configGroup > ul{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);      
+    gap: 20px;
+}
+
+/* lado derecho */
+
 .rightSide{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5,1fr);
 }
 
+
+/* div superior, el header */
+
 .navContainer{
     border: 2px solid orange;
     margin: 5px;
+    padding: 15px;
 
     grid-column: 1/6;
     grid-row: 1/2;
@@ -45,22 +82,115 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-}
 
-/* .navContainer > div{
-    border: 1px solid black;
-} */
+    justify-items: left;
+    
+}
 
 .searchBar{
     grid-column: 1/3;
+    /* margin-top: 10px; */
+
+    display:flex;
+    align-items: center;
+    margin-top: -30px;
+}
+
+.searchBar > input{
+    width: 500px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.searchBar > img{
+    width: 20px;
+    height: 20px;
+}
+
+.searchBar > div{
+    display: inline;
+}
+
+.userProfile{
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+
+    margin-top: -30px;
+}
+
+.userPP > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.notiBell > img{
+    height: 20px;
+    width: 20px;
 }
 
 .userDisplay{
     grid-column: 1/3;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+
+    align-items: center;
 }
 
-.cardContainer{
-    border: 2px solid greenyellow;
+.userPictureBig{
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    justify-self: right;
+    margin-right: 10px;
+}
+
+.greeting{
+    margin-bottom: -30px;
+}
+
+.userNameAndNick{
+    grid-template-columns: 2/3;
+    grid-row:2/3;
+
+    margin-top: 5px;
+}
+
+.userPictureBig > img{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+}
+
+.buttonContainer{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 31px;
+}
+
+.buttonContainer > button{
+    border-radius: 20px;
+    height: 25px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+
+    background-color: #1e3a8a;
+}
+
+ /* Centro de la pag, donde van las tarjetas  */
+
+ .cardContainer{
+    /* border: 2px solid greenyellow ; */
     margin: 5px;
 
     grid-column: 1/5;
@@ -78,7 +208,7 @@
 }
 
 .cardContainer > div {
-    border: 2px solid brown;
+    /* border: 2px solid brown; */
     margin: 5px;
     margin-left: 15px;
 }
@@ -96,20 +226,16 @@
 }
 
 .announcementsContainer{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: grid;
 }
 
 .trendingContainer{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 }
 
 .trendingContainer > div{
     margin-left: 20px;
-}
-
-ul, li{
-    list-style: none;
 }

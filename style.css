@@ -15,7 +15,6 @@ ul, li{
 /* Grupo de elementos a la izquierda */
 
 .leftSide{
-    /* border: 2px solid blue; */
     display:  grid;
     grid-template-rows: 0.2fr 1fr 1fr;
     justify-content: left;
@@ -88,18 +87,19 @@ ul, li{
 /* lado derecho */
 
 .rightSide{
-    /* border: 2px solid red; */
+    background-color: #e0e7ff;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5,1fr);
 }
 
-
 /* div superior, el header */
 
 .navContainer{
-    border: 2px solid orange;
-    margin: 5px;
+    background-color: #ffffff;
+
+    margin: 0px;
     padding: 15px;
 
     grid-column: 1/6;
@@ -109,8 +109,7 @@ ul, li{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
 
-    justify-items: left;
-    
+    justify-items: left;    
 }
 
 .searchBar{
@@ -216,7 +215,6 @@ ul, li{
  /* Centro de la pag, donde van las tarjetas  */
 
  .cardContainer{
-    /* border: 2px solid greenyellow ; */
     margin: 5px;
 
     grid-column: 1/5;
@@ -234,32 +232,58 @@ ul, li{
 }
 
 .cardContainer > div {
-    /* border: 2px solid brown; */
     margin: 5px;
     margin-left: 15px;
 }
 
+/* los elementos que van del lado derecho de la pagina */
+
 .sidebarContainer{
-    /* border: 2px solid orchid; */
     margin: 5px;
 
     grid-row: 2/6;
     grid-column: 5/6;
 
-    display: grid;
+    /* display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 50px;
+    gap: 50px; */
+}
+ 
+.announcementsContainer{
+    background-color: #ffffff;
+    
+    margin-top: 15px;
+    margin-bottom: 50px;
+    
+    padding: 20px;
+    
+    border-radius: 5%;
+
+    display: grid;
+    gap: 30px;
 }
 
-.announcementsContainer{
-    /* border: 2px solid black; */
-    display: grid;
+.announcementCard{
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #d1d5db;
 }
 
 .trendingContainer{
-    /* border: 2px solid red; */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5%;
+
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(4, 1fr);
+    gap: 10px; */
+}
+
+.trendingNames,
+.trendingImages{
+    display: grid;
+    gap: 10px;
 }
 
 .trendingContainer > div{

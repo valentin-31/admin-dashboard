@@ -236,6 +236,18 @@ ul, li{
     margin-left: 15px;
 }
 
+/* cada card en el centro de la pag */
+
+.card{
+    background-color: #ffffff;
+    border-left: 8px solid #d97706;
+    border-radius: 5%;
+    padding: 30px;
+
+    display: grid;
+    gap: 10px;
+}
+
 /* los elementos que van del lado derecho de la pagina */
 
 .sidebarContainer{
@@ -243,12 +255,10 @@ ul, li{
 
     grid-row: 2/6;
     grid-column: 5/6;
-
-    /* display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 50px; */
 }
  
+/* primer grupo de elementos de la sideber derechas */
+
 .announcementsContainer{
     background-color: #ffffff;
     
@@ -269,23 +279,37 @@ ul, li{
     border-bottom: 1px solid #d1d5db;
 }
 
+.announcementCard > p{
+    color: #334155;
+}
+
+/* segundo grupo de elementos de la sidebar */
+
 .trendingContainer{
     background-color: #ffffff;
     padding: 20px;
     border-radius: 5%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: repeat(4, 1fr);
-    gap: 10px; */
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px; 
 }
 
-.trendingNames,
-.trendingImages{
+/* iguala el tamaño de las fotos de perfil de los usuarios */
+.user > img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.user{
     display: grid;
-    gap: 10px;
+    grid-template-columns: 1fr 2fr;
+
+    align-items: center;
+    justify-items: left;
 }
 
-.trendingContainer > div{
-    margin-left: 20px;
+.user > div > p{
+    color: #334155;
 }

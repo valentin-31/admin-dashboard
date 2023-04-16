@@ -243,9 +243,25 @@ ul, li{
     border-left: 8px solid #d97706;
     border-radius: 5%;
     padding: 30px;
-
+    
     display: grid;
     gap: 10px;
+}
+
+.card > p{
+    height: 150px;
+}
+
+.cardMedia{
+    margin-left: 150px;
+    display: flex;
+    gap: 20px;
+}
+
+/* ajusta el tamaño de los iconos de compartir de cada tarjeta */
+.cardMedia > img{
+    width: 25px;
+    height: 25px;
 }
 
 /* los elementos que van del lado derecho de la pagina */
